@@ -1,0 +1,45 @@
+<template>
+  <view class="list">
+    <!-- <view wx:for="{{listData}}" wx:key="index">{{item}}</view> -->
+    <!-- 金额 -->
+    <view class="section">
+      <view class="section__title">金额</view>
+      <input
+        class="weui-input"
+        auto-focus
+        type="number"
+        wx:model="{{amount}}"
+        placeholder="请输入金额"
+      />
+    </view>
+    <!-- 详情 -->
+    <view class="section">
+      <view class="section__title">详情</view>
+      <input class="weui-input" wx:model="{{detail}}" placeholder="请输入详情" />
+    </view>
+    <!-- 日期 -->
+    <view class="section">
+      <view class="section__title">日期</view>
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <!-- start="2015-09-01" -->
+        <!-- end="2017-09-01" -->
+        <view class="picker"> 当前选择: {{ date }} </view>
+      </picker>
+    </view>
+
+    <button type="primary" bindtap="handleSubmit">提交</button>
+  </view>
+</template>
+
+<script lang="ts" src="./index.ts"></script>
+
+<style lang="stylus">
+  .list
+    background-color #fff
+</style>
+
+<script type="application/json">
+  {
+    "component": true
+  }
+</script>

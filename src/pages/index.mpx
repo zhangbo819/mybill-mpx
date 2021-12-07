@@ -1,0 +1,21 @@
+<template>
+  <!-- <List></List> -->
+  <navigator url="/pages/List/index" class="title">账单</navigator>
+  <BillInput></BillInput>
+</template>
+
+<script lang="ts" src="./index.ts"></script>
+
+<style lang="stylus">
+  .title
+    margin-bottom 10px
+</style>
+
+<script type="application/json">
+  {
+    "usingComponents": {
+      "BillInput": "../components/BillInput"
+      // "List": "../components/List"
+    }
+  }
+</script>
