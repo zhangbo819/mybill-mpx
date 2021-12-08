@@ -1,8 +1,7 @@
 <template>
   <!-- <List></List> -->
   <!-- <navigator url="/pages/List/index" class="title">账单</navigator> -->
-  <!-- <BillInput></BillInput> -->
-  <view>home</view>
+  <BillInput></BillInput>
 </template>
 
 <script lang="ts" src="./index.ts"></script>
@@ -15,7 +14,7 @@
 <script type="application/json">
   {
     "usingComponents": {
-      "BillInput": "../components/BillInput"
+      "BillInput": "../../components/BillInput"
     }
   }
 </script>

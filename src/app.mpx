@@ -6,7 +6,24 @@
 
 <script type="application/json">
   {
-    "pages": ["./pages/index", "./pages/List"]
+    "entryPagePath": "pages/BillInput/index",
+    "pages": ["./pages/index", "./pages/BillInput/index", "./pages/List/index"],
+    "tabBar": {
+      "custom": true,
+      "color": "#000000",
+      "selectedColor": "#000000",
+      "backgroundColor": "#000000",
+      "list": [
+        {
+          "pagePath": "pages/BillInput/index",
+          "text": "录入"
+        },
+        {
+          "pagePath": "pages/List/index",
+          "text": "列表"
+        }
+      ]
+    }
   }
 </script>
 
