@@ -1,5 +1,5 @@
 <template>
-  <view class="list">
+  <view class="bg">
     <!-- <view wx:for="{{listData}}" wx:key="index">{{item}}</view> -->
     <!-- 金额 -->
     <view class="section">
@@ -27,19 +27,26 @@
       </picker>
     </view>
 
-    <button type="primary" bindtap="handleSubmit">提交</button>
+    <button class="submit-btn" type="primary" bindtap="handleSubmit">提交</button>
   </view>
 </template>
 
 <script lang="ts" src="./index.ts"></script>
 
 <style lang="stylus">
-  .list
+  .bg
+    padding 8px
     background-color #fff
+  .section__title
+    margin 4px 0
+    font-size 16px
+    color #000
+    font-weight bold
+  .submit-btn
+    width 70%
+    margin 36px auto 0
 </style>
 
 <script type="application/json">
-  {
-    
-  }
+  {}
 </script>

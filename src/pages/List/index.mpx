@@ -1,7 +1,7 @@
 <template>
   <view class="list">
-    <text>列表</text>
-    <view>
+    <text class="title">列表</text>
+    <view class="btn-group">
       <button type="primary" size="mini" bindtap="handleClear">清空</button>
       <button type="primary" size="mini" bindtap="handleCopy">复制</button>
     </view>
@@ -16,6 +16,15 @@
 <style lang="stylus">
   .list
     background-color #fff
+    padding 8px
+  .title
+    font-size 16px
+    color #000
+    font-weight bold
+  .btn-group 
+    margin 12px 0
+  .btn-group > button
+    margin-right 8px
   .row
     display flex
     justify-content space-between
@@ -24,7 +33,5 @@
 <script lang="ts" src="./index.ts"></script>
 
 <script type="application/json">
-  {
-
-  }
+  {}
 </script>
