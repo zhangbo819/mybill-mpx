@@ -9,9 +9,10 @@
       data-index="{{index}}"
       bindtap="switchTab"
     >
-      <!-- <cover-image
+      <cover-image
         src="{{selected === index ? item.selectedIconPath : item.iconPath}}"
-      ></cover-image> -->
+      ></cover-image>
+      <!-- <cover-image src="../image/icon_API_HL.png"></cover-image> -->
       <cover-view style="color: {{selected === index ? selectedColor : color}}">{{
         item.text
       }}</cover-view>

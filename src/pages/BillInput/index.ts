@@ -1,4 +1,4 @@
-import { createPage } from '@mpxjs/core'
+import { createComponent } from '@mpxjs/core'
 
 
 interface event {
@@ -11,9 +11,16 @@ const KEY = "MPX_BILL_KEY"
 const now = new Date()
 
 
-createPage({
-  onLoad() {
-    // onLoad
+createComponent({
+  pageLifetimes: {
+    show() {
+      if (typeof this.getTabBar === 'function' &&
+        this.getTabBar()) {
+        this.getTabBar().setData({
+          selected: 0
+        })
+      }
+    }
   },
   data: {
     amount: '0',

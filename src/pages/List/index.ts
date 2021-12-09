@@ -1,11 +1,18 @@
-import { createPage } from '@mpxjs/core'
+import { createComponent } from '@mpxjs/core'
 
 const KEY = "MPX_BILL_KEY"
 type dataItem = string
 
-createPage({
-  onLoad() {
-    // onLoad
+createComponent({
+  pageLifetimes: {
+    show() {
+      if (typeof this.getTabBar === 'function' &&
+        this.getTabBar()) {
+        this.getTabBar().setData({
+          selected: 1
+        })
+      }
+    }
   },
   data: {
     datas: [],
