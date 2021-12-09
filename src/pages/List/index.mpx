@@ -1,13 +1,30 @@
 <template>
-  <List></List>
+  <view class="list">
+    <text>列表</text>
+    <view>
+      <button type="primary" size="mini" bindtap="handleClear">清空</button>
+      <button type="primary" size="mini" bindtap="handleCopy">复制</button>
+    </view>
+    <view wx:for="{{datas}}" wx:key="index" class="row">
+      <view>{{ item[0] }}</view>
+      <view>{{ item[1] }}</view>
+      <view>￥{{ item[2] }}</view>
+    </view>
+  </view>
 </template>
+
+<style lang="stylus">
+  .list
+    background-color #fff
+  .row
+    display flex
+    justify-content space-between
+</style>
 
 <script lang="ts" src="./index.ts"></script>
 
 <script type="application/json">
   {
-    "usingComponents": {
-      "List": "../../components/List"
-    }
+
   }
 </script>
